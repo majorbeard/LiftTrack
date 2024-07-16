@@ -296,7 +296,7 @@ body {
     }
 
     .drawer-line-1_clicked {
-        transform: scaleX(1) rotate(-45deg) translateY(-6.5px);
+        transform: scaleX(1) rotate(-45deg) translateY(-6.9px);
         transition: all 0.15s ease;
     }
 
@@ -315,7 +315,7 @@ body {
     }
 
     .drawer-line-3_clicked {
-        transform: rotate(45deg) translateY(6.5px);
+        transform: rotate(45deg) translateY(6.9px);
     }
 
     /* MOBILE NAV ANIMATIONS */
