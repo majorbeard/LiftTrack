@@ -37,11 +37,25 @@ a {
 }
 
 /* STYLES */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     width: 100svw;
     position: relative;
     font-family: var(--logo-font);
     overflow-x: hidden;
+    position: relative;
+}
+
+.to-top {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 3;
+    width: 50px;
+    height: 50px;
 }
 
 /* LOGO */
@@ -363,7 +377,53 @@ body {
     margin: 0 0 1rem 0;
 }
 
+/* EXPLORE SECTION */
+.explore-section .heading {
+    color: var(--main-color);
+    font-size: 3.5rem;
+}
 
+.explore-section-container {
+    align-items: center;
+    gap: 1rem;
+    margin: 10rem 0;
+}
+
+.explore-section_left {
+    width: 50%;
+}
+
+.explore_ul {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.explore_li {
+    gap: 1rem;
+}
+
+.explore-tick {
+    width: 30px;
+}
+
+.explore-section_right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.explore-img-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-screenshot_explore {
+    width: 80%;
+}
 
 /* MEDIA QUERIES */
 @media only screen and (max-width: 1860px) {
@@ -483,6 +543,10 @@ body {
     }
 
     /* MOBILE NAV ANIMATIONS */
+    .mobile-nav_drawer:hover {
+        cursor: pointer;
+    }
+
     .mobile-nav_drawer:hover .drawer-line-1 {
         animation: navLine1 0.35s ease-in-out;
     }
@@ -524,6 +588,10 @@ body {
         display: none;
     }
 
+    /* EXPLORE SECTION */
+    .explore-img-wrapper {
+        width: 80%;
+    }
 }
 
 @media only screen and (max-width: 1500px) {
@@ -739,6 +807,39 @@ body {
     .app-screenshot {
         width: 50%;
         height: auto;
+    }
+
+    /* EXPLORE SECTION */
+    .explore-section {
+        margin-top: -10rem;
+    }
+
+    .explore-section-container {
+        align-items: flex-start;
+        flex-direction: column-reverse;
+        gap: 1rem;
+        margin: 0 0 5rem 0;
+    }
+
+    .explore-section .heading {
+        color: var(--main-color);
+        font-size: 2rem;
+    }
+
+    .explore-section_left {
+        width: 100%;
+    }
+
+    .explore-section_right {
+        justify-content: flex-start;
+    }
+
+    .explore-img-wrapper {
+        justify-content: flex-start;
+    }
+
+    .app-screenshot_explore {
+        width: 100%;
     }
 }
 
