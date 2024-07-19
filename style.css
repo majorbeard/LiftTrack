@@ -304,7 +304,7 @@ body {
 
 /* INLINE LINK HOVER */
 .inline-link:hover {
-    font-weight: 500;
+    text-decoration: underline;
 }
 
 .main-hero-container_right {
@@ -341,9 +341,29 @@ body {
     color: var(--text-color);
 }
 
-.app-screenshot {
-    width: 20px;
+.app-paragraph {
+    font-size: 1.5rem;
 }
+
+.section-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 1rem;
+    margin: 3rem 0;
+}
+
+.section-card {
+    max-width: 100%;
+}
+
+.app-screenshot {
+    width: 70%;
+    max-width: 230px;
+    margin: 0 0 1rem 0;
+}
+
+
 
 /* MEDIA QUERIES */
 @media only screen and (max-width: 1860px) {
@@ -376,6 +396,7 @@ body {
 @media only screen and (max-width: 1600px) {
     .navbar-container {
         padding: 1rem 2rem;
+        position: relative;
     }
 
     .navbar {
@@ -421,7 +442,9 @@ body {
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        position: relative;
+        position: fixed;
+        top: 1.5rem;
+        right: 1rem;
         z-index: 2;
     }
 
@@ -496,6 +519,11 @@ body {
     .main {
         position: relative;
     }
+
+    .section-header-wrapper > .logo-main {
+        display: none;
+    }
+
 }
 
 @media only screen and (max-width: 1500px) {
@@ -640,7 +668,7 @@ body {
     
     /* INLINE LINK HOVER */
     .inline-link:hover {
-        font-weight: 500;
+        text-decoration: underline;
     }
     
     .main-hero-container_right {
@@ -655,6 +683,62 @@ body {
     .logo-line_container_btn {
         width: 40px;
         height: 21px;
+    }
+
+    .section-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* APP GRID */
+    .section-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-card {
+        display: inline-flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .card-2 {
+        flex-direction: row-reverse;
+        transform: translateY(-100px);
+    }
+
+    .card-3 {
+        transform: translateY(-100px);
+    }
+
+    .card-4 {
+        flex-direction: row-reverse;
+        transform: translateY(-200px);
+    }
+
+    #a-text {
+        margin: 1rem 0 0 0;
+    }
+
+    #b-text {
+        align-self: flex-end;
+        margin: 0 0 2rem 0;
+    }
+
+    #c-text {
+        margin: 1rem 0 0 0;
+    }
+
+    #d-text {
+        align-self: flex-end;
+        margin: 0 0 2rem 0;
+    }
+
+    .app-screenshot {
+        width: 50%;
+        height: auto;
     }
 }
 
