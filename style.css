@@ -327,7 +327,8 @@ body {
 }
 
 .modal-container {
-    width: 40%;
+    width:max-content;
+    height: max-content;
     flex-direction: column;
     justify-content: space-between;
     background-color: var(--text-color);
@@ -801,8 +802,8 @@ body {
     }
 
     .modal-container {
-        width: 70%;
-    } 
+        width: max-content;
+    }
 }
 
 @media only screen and (max-width: 782px) {
