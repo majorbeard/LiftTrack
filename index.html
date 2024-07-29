@@ -58,8 +58,8 @@
                 <p class="logo-font">LiftTrack</p>
             </div>
 
-        <nav class="navbar">
-            <ul class="nav-ul flex">
+        <nav class="navbar flex">
+            <ul class="flex nav-left">
                 <li class="nav-li">
                     <a href="#" class="nav-link">Home</a>
                 </li>
@@ -79,9 +79,27 @@
                 <li class="nav-li">
                     <a href="#" class="nav-link">Sleep tracker</a>
                 </li>
+            </ul>
 
-                <li class="nav-li">
-                    <a href="#" class="nav-link">Login | Register</a>
+            <ul class="flex nav-right">
+                <li class="nav-li nav-link_login">
+                    <a href="#">
+                        <div class="logo-main">
+                            <div class="logo-square_btn login-btn flex">
+                                <p class="btn-font login-text">Log in</p>
+                            </div>                            
+                        </div>
+                    </a>
+                </li>
+
+                <li class="nav-li nav-link_getstarted">
+                    <a href="#">
+                        <div class="logo-main">
+                            <div class="logo-square_btn get-started-btn flex">
+                                <p class="btn-font get-started-text">Get started</p>
+                            </div>                            
+                        </div>
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -115,12 +133,76 @@
                 <li class="nav-li">
                     <a href="#" class="nav-link">Sleep tracker</a>
                 </li>
+            </ul>
 
-                <li class="nav-li">
-                    <a href="#" class="nav-link">Login | Register</a>
+            <ul class="mobile-nav-ul flex">
+                <li class="nav-li nav-link_login">
+                    <a href="#">
+                        <div class="logo-main">
+                            <div class="logo-square_btn login-btn flex">
+                                <p class="btn-font login-text">Log in</p>
+                            </div>                            
+                        </div>
+                    </a>
+                </li>
+
+                <li class="nav-li nav-link_getstarted">
+                    <a href="#">
+                        <div class="logo-main">
+                            <div class="logo-square_btn get-started-btn flex">
+                                <p class="btn-font get-started-text">Get started</p>
+                            </div>                            
+                        </div>
+                    </a>
                 </li>
             </ul>
         </nav>
+    </div>
+
+    <div class="modal login-modal flex">
+        <div class="modal-container flex">
+
+            <button class="modal-btn">
+                <div class="modal-btn_line modal-line-1"></div>
+                <div class="modal-btn_line modal-line-2"></div>
+            </button>
+
+            <a class="modal-link_google" href="#"><img id="google-logo" src="images/google-icon.svg">Continue with Google</a>
+            <p class="modal-paragraph">or</p>
+
+            <form class="modal_form flex" action="" method="get">
+                <div class="form-input-container">
+                    <label class="email" for="email"></label>
+                    <input id="email" type="email" required placeholder="Email">
+                </div>
+
+                <div class="form-input-container">
+                    <label class="password" for="password"></label>
+                    <input id="password" type="password" required placeholder="Password">
+                </div>
+
+                <button class="modal_button" type="submit">
+                    <div class="logo-main">
+                        <div class="logo-square_btn flex">
+                            <div class="logo-line_container_btn flex">
+                                <div class="logo-line logo-line-1 logo-line-1_ani"></div>
+                                <div class="logo-line logo-line-2 logo-line-2_ani"></div>
+                                <div class="logo-line logo-line-3 logo-line-3_ani"></div>
+                                <div class="logo-line logo-line-3 logo-line-4_ani"></div>
+                                <div class="logo-line logo-line-2 logo-line-5_ani"></div>
+                                <div class="logo-line logo-line-1 logo-line-6_ani"></div>
+                            </div>
+                            <p class="btn-font">Log in</p>
+                        </div>                            
+                    </div>
+                </button>
+            </form>
+
+            <a class="pass_reset" href="#">Reset password</a>
+
+            <p class="no-member">Not a member yet? <a href="#" class="acc_create">Create an account.</a></p>
+
+        </div>
     </div>
 
     <main id="main" class="main">
@@ -153,8 +235,7 @@
                                     <div class="logo-line logo-line-1 logo-line-6_ani"></div>
                                 </div>
                                 <p class="btn-font">Find out more</p>
-                            </div>
-                            
+                            </div>                            
                         </div>
                     </a>
                 </div>
