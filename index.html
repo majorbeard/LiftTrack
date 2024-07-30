@@ -198,9 +198,68 @@
                 </button>
             </form>
 
-            <a class="pass_reset" href="#">Reset password</a>
+            <p><a class="form-paragraph inline-link" href="#">Reset password</a>.</p>
 
-            <p class="no-member">Not a member yet? <a href="#" class="acc_create">Create an account.</a></p>
+            <p class="form-paragraph">Not a member yet? <a href="#" class="inline-link">Create an account</a>.</p>
+
+        </div>
+    </div>
+
+    <div class="modal signup-modal flex">
+        <div class="modal-container flex">
+
+            <button class="modal-btn">
+                <div class="modal-btn_line modal-line-1"></div>
+                <div class="modal-btn_line modal-line-2"></div>
+            </button>
+
+            <a class="modal-link_google" href="#"><img id="google-logo" src="images/google-icon.svg">Continue with Google</a>
+            <p class="modal-paragraph">or</p>
+
+            <form class="modal_form flex" action="" method="get">
+
+                <p class="form-paragraph">What should we call you?</p>
+                <div class="form-input-container">
+                    <label class="name" for="name"></label>
+                    <input id="name" type="text" required placeholder="Name">
+                </div>
+
+                <div class="form-input-container">
+                    <label class="last-name" for="last-name"></label>
+                    <input id="last-name" type="text" required placeholder="Surname">
+                </div>
+
+                <p class="form-paragraph">Your log in details.</p>
+                <div class="form-input-container">
+                    <label class="email" for="email"></label>
+                    <input id="email" type="email" required placeholder="Email">
+                </div>
+
+                <div class="form-input-container">
+                    <label class="password" for="password"></label>
+                    <input id="password" type="password" required placeholder="Password">
+                </div>
+
+                <button class="modal_button" type="submit">
+                    <div class="logo-main">
+                        <div class="logo-square_btn flex">
+                            <div class="logo-line_container_btn flex">
+                                <div class="logo-line logo-line-1 logo-line-1_ani"></div>
+                                <div class="logo-line logo-line-2 logo-line-2_ani"></div>
+                                <div class="logo-line logo-line-3 logo-line-3_ani"></div>
+                                <div class="logo-line logo-line-3 logo-line-4_ani"></div>
+                                <div class="logo-line logo-line-2 logo-line-5_ani"></div>
+                                <div class="logo-line logo-line-1 logo-line-6_ani"></div>
+                            </div>
+                            <p class="btn-font">Create account</p>
+                        </div>                            
+                    </div>
+                </button>
+            </form>
+
+            <p class="form-paragraph">By clicking "Create account" or "Continue with Google", you agree to the <a href="#" class="inline-link">LiftTrack TOS</a> and <a href="#" class="inline-link">Privacy Policy</a>.</p>
+
+            <p class="form-paragraph no-member">Already a member? <a href="#" class="inline-link">Log in</a>.</p>
 
         </div>
     </div>
