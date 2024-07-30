@@ -31,7 +31,7 @@ const DOM = {
   
   let scrollPosition;
   
-  // Utility functions
+  // Utility functions | ENABLE DISABLE SCROLL WHEN MODAL IS OPEN
   const disableScroll = () => {
     scrollPosition = window.pageYOffset;
     document.body.style.top = `-${scrollPosition}px`;
