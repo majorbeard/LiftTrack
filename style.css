@@ -533,7 +533,7 @@ header {
     grid-area: h;
 }
 
-/* SIGN UP SECTION */
+/* INFO SECTION */
 .info-section {
     width: 100%;
     flex-direction: column;
@@ -544,6 +544,10 @@ header {
 
 .info-section .section-container {
     flex-direction: column;
+}
+
+.info-section .section-container h2 {
+    margin-bottom: var(--spacing-xxlarge);
 }
 
 .info-section .info-wrapper {
@@ -568,7 +572,7 @@ header {
 }
 
 /* INFO LIST */
-.info-section h2 {
+.info-section h3 {
     margin: var(--spacing-medium) 0;
 }
 
