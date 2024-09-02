@@ -624,8 +624,12 @@ header {
 
 .question-wrapper {
     width: 100%;
-    align-items: center;
+    align-items: top;
     gap: 0.5rem;
+}
+
+.question-wrapper h3 {
+    width: 95%;
 }
 
 /* FAQ ICON */
@@ -639,6 +643,7 @@ header {
     align-items: center;
     justify-content: center;
     position: relative;
+    transform: translateY(5px);
 }
 
 .question-icon-line {
