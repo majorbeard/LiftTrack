@@ -131,7 +131,15 @@
                         <!-- PASSWORD -->
                     <div class="form-group flex">
                         <label for="password">Password<span class="asterisk"> *</span></label>
-                        <input type="password" id="password" name="password" required placeholder="Create a password" aria-required="true">
+
+                        <div class="password-wrapper">
+                            <input type="password" id="password" name="password" required placeholder="Create a password" aria-required="true">
+                            <span class="toggle-password">
+                                <img src="images/Icons/eye.svg" alt="Show password" id="togglePassword" class="icon eye-icon-hidden">
+                                <img src="images/Icons/eye-show.svg" alt="hide password" id="togglePassword" class="icon eye-icon-visible">
+                            </span>
+                        </div>
+
                     </div>
 
                     <!-- CONFIRM PASSWORD -->

@@ -86,6 +86,7 @@ body {
     background-color: transparent;
     border: 1px solid var(--main-color);
     border-radius: var(--border-radius-medium);
+    color: #FFFFFF;
 }
 
 .asterisk {
@@ -102,6 +103,37 @@ body {
     width: 100%;
     height: 40px;
     margin: var(--spacing-medium) 0;
+}
+
+/* PASSWORD WRAPPER */
+.password-wrapper {
+    position: relative;
+}
+
+.eye-icon-hidden,
+.eye-icon-visible {
+    position: absolute;
+    right: var(--spacing-medium);
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.eye-icon-hidden:hover,
+.eye-icon-visible:hover {
+    cursor: var(--cursor-hover);
+}
+
+.eye-icon-visible {
+    display: none;
+}
+
+/* EYE ICON CLICKED */
+.eye-icon-hidden_clicked {
+    display: none;
+}
+
+.eye-icon-visible_clicked {
+    display: block;
 }
 
 /* PARAGRAPHS */
