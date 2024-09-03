@@ -100,7 +100,7 @@ button:hover {
 /* BUTTONS */
 .btn {
     width: max-content;
-    padding: var(--spacing-medium) var(--spacing-large);
+    padding: var(--spacing-small) var(--spacing-medium);
     background-color: var(--main-color);
     color: #FFFFFF;
     border-radius: var(--border-radius-medium);
@@ -247,7 +247,7 @@ li {
     right: 20px;
     width: 40px;
     height: 40px;
-    z-index: 5;
+    z-index: 0;
 }
 
 .top-btn img {
@@ -423,20 +423,25 @@ header {
 /* SIGNUP WRAPPER */
 .signup-wrapper {
     width: 100%;
-    gap: 2rem;
-    flex-direction: column;
+    gap: 1rem;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     background-color: var(--main-color);
-    padding: var(--spacing-xxlarge);
+    padding: var(--spacing-medium) var(--spacing-xxlarge);
 }
 
 /* SIGNUP BUTTON */
-.signup-btn,
 .login-btn {
     width: 100%;
     background-color: #FFFFFF;
     color: var(--main-color);
+}
+
+.signup-btn {
+    width: 100%;
+    background-color: var(--secondary-color);
+    color: #FFFFFF;
 }
 
 /* HERO SECTION */
