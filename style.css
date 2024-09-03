@@ -428,7 +428,7 @@ header {
     align-items: center;
     justify-content: center;
     background-color: var(--main-color);
-    padding: var(--spacing-medium) var(--spacing-xxlarge);
+    padding: var(--spacing-medium) var(--spacing-xxlarge) var(--spacing-xxlarge) var(--spacing-xxlarge);
 }
 
 /* SIGNUP BUTTON */
