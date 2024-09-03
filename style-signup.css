@@ -127,15 +127,6 @@ body {
     display: none;
 }
 
-/* EYE ICON CLICKED */
-.eye-icon-hidden_clicked {
-    display: none;
-}
-
-.eye-icon-visible_clicked {
-    display: block;
-}
-
 /* PARAGRAPHS */
 .login-text,
 .terms-text {

@@ -43,3 +43,20 @@ function toggleAnswer(event) {
     questionIconLine2.classList.remove('question-line_2_rotated');
   }
 }
+
+// EYE ICON
+const eyeIconHidden = document.querySelector('.eye-icon-hidden');
+const eyeIconVisible = document.querySelector('.eye-icon-visible');
+const passwordInput = document.querySelector('input[type="password"]');
+
+eyeIconHidden.addEventListener('click', () => {
+  eyeIconHidden.style.display = 'none';
+  eyeIconVisible.style.display = 'block';
+  passwordInput.type = 'text';
+});
+
+eyeIconVisible.addEventListener('click', () => {
+  eyeIconHidden.style.display = 'block';
+  eyeIconVisible.style.display = 'none';
+  passwordInput.type = 'password';
+});
