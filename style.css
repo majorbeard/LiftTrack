@@ -209,7 +209,7 @@ li {
     height: 40px;
     align-items: baseline;
     justify-content: space-around;
-    padding: var(--spacing-xsmall);
+    padding: 4px;
     border-radius: var(--border-radius-small);
 }
 
@@ -385,7 +385,7 @@ header {
 }
 
 .navbar-menu_mobile {
-    padding: calc(2 * var(--spacing-xxlarge)) 0 var(--spacing-xxlarge) 0;
+    padding: calc(2 * var(--spacing-xxlarge)) 0 var(--spacing-medium) 0;
     flex-direction: column;
     gap: 0.5rem;
 }
