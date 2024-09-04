@@ -570,13 +570,16 @@ h1 {
     background-color: var(--secondary-color);
     border-radius: 1.5rem;
     overflow: hidden;
+    position: relative;
 }
 
 .info-image {
-    width: 100%;
+    width: 80%;
     height: auto;
-    object-fit: fill;
-    object-position: center;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* INFO LIST */
@@ -750,13 +753,47 @@ h1 {
 /* TABLETS */
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
     /* TABLET STYLES */
-    /* NAVBAR */
+    body {
+        font-size: 17px;
+    }
+    /* APP SECTION */
+    .app-grid {
+        grid-template-areas:
+        "a d f g"
+        "b c e h";
+        gap: 2rem;
+    }
 
+
+    .app-image {
+        width: 100%;
+        height: 100%;
+    }
+
+    #d {
+        align-self: self-start;
+    }
+    #g {
+        align-self: self-start;
+    }
+
+
+    /* INFO SECTION */
+    /* INFO IMAGE */
+    .info-img-wrapper {
+        height: 350px;
+    }
 }
 
 /* DESKTOPS */
 @media only screen and (min-width: 1025px) {
     /* DESKTOP STYLES */
+    body {
+        font-size: 18px;
+    }
+
+    /* NAVBAR */
+    
 }
 
 /* KEYFRAMES */
