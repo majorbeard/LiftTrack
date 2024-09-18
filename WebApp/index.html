@@ -38,146 +38,123 @@
 
     <!-- HEADER -->
     <header>
-        <div class="header-container container flex">
-
-            <div class="nav-menu-toggle_container flex">
-                <div class="nav-menu-toggle nav-menu-toggle_1"></div>
-                <div class="nav-menu-toggle nav-menu-toggle_1"></div>
-                <div class="nav-menu-toggle nav-menu-toggle_1"></div>
+        <div class="container-flex header-container">
+            <div class="nav-btn flex">
+                <div class="nav-btn-line nav-btn-line-1"></div>
+                <div class="nav-btn-line nav-btn-line-2"></div>
+                <div class="nav-btn-line nav-btn-line-3"></div>
             </div>
-
-            <div class="nav-menu-profile flex">
-                <img id="profile-icon" src="images/icons/profile.svg" alt="Profile icon">
+            <div class="profile-icon">
+                <img src="images/icons/profile.svg" alt="Profile">
             </div>
         </div>
     </header>
 
     <!-- MAIN -->
     <main>
-        <!-- INTRO -->
-        <div class="container">
-            <h1>Hello, <span class="name">Thabo</span>.</h1>
-            <span class="intro-message">Let's have a productive workout today!</span>
-        </div>        
+        <!-- USER INTRO -->
+        <div class="container-flex intro-container">
+            <h1>Hello, <span class="user-name">Thabo</span>.</h1>
+            <p><span class="intro-message">Let's have a productive workout today!</span></p>
 
-        <!-- CALENDAR -->
-            <div class="overflow-container calendar-container flex">
-            <!-- CALENDAR CARD -->
-                <div class="calendar-card flex">
-                <div class="wrapper completed-workout-wrapper flex">
-                    <div class="completed-workout-icon"></div>
-                    <span class="day">SUN</span>
-                </div>                
-                <span class="date">14</span>
-                        
-                <div class="active-workout-icon inactive-workout-icon"></div>
-                        
-                <span class="workout-icon"><img src="images/icons/bench_press.svg" alt="Bench Press"></span>
-            </div>
-            
-            <!-- CALENDAR CARD -->
-            <div class="calendar-card flex">
-                <div class="wrapper completed-workout-wrapper flex">
-                    <div class="completed-workout-icon"></div>
-                    <span class="day">MON</span>
-                </div>                
-                <span class="date">15</span>
-            
-                <div class="active-workout-icon inactive-workout-icon"></div>
-            
-                <span class="workout-icon"><img src="images/icons/bench_press.svg" alt="Bench Press"></span>
-            </div>
+            <!-- MAIN CALENDAR -->
+            <div class="overflow-wrapper-grid-horizontal">
+                <div class="wrapper-flex calendar-wrapper">
+                    <div class="completed-workout-marker"></div>
+                    <div class="day">SUN</div>
+                    <div class="date">14</div>
+                    <div class="workout-icon">
+                        <img src="images/icons/bench_press.svg" alt="Bench Press">
+                    </div>
+                    <div class="inactive-workout-marker"></div>
+                </div> 
 
-            <!-- CALENDAR CARD -->
-            <div class="calendar-card flex">
-                <div class="wrapper completed-workout-wrapper flex">
-                    <div class="completed-workout-icon"></div>
-                    <span class="day">TUE</span>
-                </div>                
-                <span class="date">16</span>
+                <div class="wrapper-flex calendar-wrapper">
+                    <div class="completed-workout-marker"></div>
+                    <div class="day">MON</div>
+                    <div class="date">15</div>
+                    <div class="workout-icon">
+                        <img src="images/icons/bench_press.svg" alt="Bench Press">
+                    </div>
+                    <div class="inactive-workout-marker"></div>
+                </div> 
 
-                <div class="active-workout-icon inactive-workout-icon"></div>
+                <div class="wrapper-flex calendar-wrapper">
+                    <div class="completed-workout-marker"></div>
+                    <div class="day">TUE</div>
+                    <div class="date">16</div>
+                    <div class="workout-icon">
+                        <img src="images/icons/bench_press.svg" alt="Bench Press">
+                    </div>
+                    <div class="inactive-workout-marker"></div>
+                </div>    
+                
+                <div id="current-workout" class="wrapper-flex calendar-wrapper">
+                    <div class="incompleted-workout-marker"></div>
+                    <div class="day">WED</div>
+                    <div class="date">17</div>
+                    <div class="workout-icon">
+                        <img src="images/icons/bench_press.svg" alt="Bench Press">
+                    </div>
+                    <div class="active-workout-marker"></div>
+                </div>
 
-                <span class="workout-icon"><img src="images/icons/bench_press.svg" alt="Bench Press"></span>
-            </div>
+                <div class="wrapper-flex calendar-wrapper">
+                    <div class="incompleted-workout-marker"></div>
+                    <div class="day">THU</div>
+                    <div class="date">18</div>
+                    <div class="workout-icon">
+                        <img src="images/icons/bench_press.svg" alt="Bench Press">
+                    </div>
+                    <div class="inactive-workout-marker"></div>
+                </div>
+                
+                <div class="wrapper-flex calendar-wrapper">
+                    <div class="incompleted-workout-marker"></div>
+                    <div class="day">FRI</div>
+                    <div class="date">19</div>
+                    <div class="workout-icon">
+                        <img src="images/icons/bench_press.svg" alt="Bench Press">
+                    </div>
+                    <div class="inactive-workout-marker"></div>
+                </div>
 
-            <!-- CALENDAR CARD -->
-            <div id="active-workout" class="calendar-card flex">
-                <div class="wrapper completed-workout-wrapper flex">
-                    <div class="incompleted-workout-icon"></div>
-                    <span class="day">WED</span>
-                </div>                
-                <span class="date">17</span>
-
-                <div class="active-workout-icon"></div>
-
-                <span class="workout-icon"><img src="images/icons/bench_press.svg" alt="Bench Press"></span>
-            </div>
-
-            <!-- CALENDAR CARD -->
-            <div id="" class="calendar-card flex">
-                <div class="wrapper completed-workout-wrapper flex">
-                    <div class="incompleted-workout-icon"></div>
-                    <span class="day">THU</span>
-                </div>                
-                <span class="date">18</span>
-            
-                <div class="active-workout-icon inactive-workout-icon"></div>
-            
-                <span class="workout-icon"><img src="images/icons/bench_press.svg" alt="Bench Press"></span>
-            </div>
-
-            <!-- CALENDAR CARD -->
-            <div id="" class="calendar-card flex">
-                <div class="wrapper completed-workout-wrapper flex">
-                    <div class="incompleted-workout-icon"></div>
-                    <span class="day">FRI</span>
-                </div>                
-                <span class="date">19</span>
-
-                <div class="active-workout-icon inactive-workout-icon"></div>
-
-                <span class="workout-icon"><img src="images/icons/bench_press.svg" alt="Bench Press"></span>
-            </div>
-
-            <!-- CALENDAR CARD -->
-            <div id="" class="calendar-card flex">
-                <div class="wrapper completed-workout-wrapper flex">
-                    <div class="incompleted-workout-icon"></div>
-                    <span class="day">SAT</span>
-                </div>                
-                <span class="date">20</span>
-
-                <div class="active-workout-icon inactive-workout-icon"></div>
-
-                <span class="workout-icon"><img src="images/icons/bench_press.svg" alt="Bench Press"></span>
+                <div class="wrapper-flex calendar-wrapper">
+                    <div class="incompleted-workout-marker"></div>
+                    <div class="day">SAT</div>
+                    <div class="date">20</div>
+                    <div class="workout-icon">
+                        <img src="images/icons/bench_press.svg" alt="Bench Press">
+                    </div>
+                    <div class="inactive-workout-marker"></div>
+                </div>
             </div>
         </div>
 
         <!-- DASHBOARD -->
-        <div class="container dashboard-container flex">
+        <div class="container-grid dashboard-container">
             <h2>Today's workout</h2>
-
             <!-- DASHBOARD CARDS -->
-
-            <!-- TODAYS WORKOUT -->
-            <div class="dashboard-card dashboard-card-1 flex">
-                <div class="wrapper flex">
-                    <h3 class="workout-name">Push</h3>
-                    <p>Last exercised on <span class="last-exercise-date">13/06/2024</span></p>
+            <!-- CARD 1 -->
+            <div class="card card-1">
+                <div class="wrapper-flex">
+                    <h3><span class="card-name">Push</span></h3>
+                    <p>Last exercised on <span class="workout-date">13/06/2024</span></p>
                 </div>
-                <div class="overflow-wrapper flex">
+
+                <div class="wrapper-flex">
                     <button class="btn-primary">See full workout</button>
                     <button class="btn-primary">Start workout</button>
                 </div>
             </div>
 
-            <!-- QUICK ACTIONS -->            
-            <div class="dashboard-card dashboard-card-2 flex">
-                <div class="wrapper flex">
-                    <h3 class="card-name">Quick actions</h3>
+            <!-- CARD 2 -->
+            <div class="card card-2">
+                <div class="wrapper-flex">
+                    <h3><span class="card-name">Quick actions</span></h3>
                 </div>
-                <div class="overflow-wrapper flex">
+
+                <div class="overflow-wrapper-flex-horizontal">
                     <button class="btn-secondary">Log meals</button>
                     <button class="btn-secondary">Log weight</button>
                     <button class="btn-secondary">Log sleep</button>
@@ -185,66 +162,42 @@
                 </div>
             </div>
 
-            <!-- ACTIVITY -->
-            <div class="wrapper activity-wrapper flex">
-                <!-- ACTIVITY CARD -->
-                <div class="dashboard-card dashboard-card-3 flex">
-                    <div class="wrapper flex">
-                        <h4 class="card-name">Training schedule</h4>
-                        <a class="inline-card-link" href="#">View full schedule</a>
-                    </div>
-                    <div class="overflow-wrapper activity-calendar-wrapper flex">
+                        <!-- CARD 3 -->
+            <div class="card card-3">
+                <div class="wrapper-flex">
+                    <h4><span class="card-name">Training schedule</span></h4>
+                    <a href="#">Full schedule</a>
 
-                        <!-- ACTIVITY CALENDER CARDS -->
-                        <div class="activity-calendar-card flex">
-                            <img src="images/icons/bench_press.svg" alt="Bench Press">
-                            <div id="active-card" class="wrapper flex">
-                                <span class="day">WED</span>
-                                <span class="date">17</span>
-                                <div class="completed-workout-icon"></div>
+                    <div class="overflow-wrapper-flex-horizontal">
+                        <div class="calendar-card inline-flex">
+                            <div class="workout-icon">
+                                <img src="images/icons/bench_press.svg" alt="Bench Press">
                             </div>
-                        </div>
-
-                        <!-- ACTIVITY CALENDER CARDS -->
-                        <div class="activity-calendar-card flex">
-                            <img src="images/icons/bench_press.svg" alt="Bench Press">
-                            <div id="inactive-card" class="wrapper flex">
-                                <span class="day">THU</span>
-                                <span class="date">18</span>
-                                <div class="incompleted-workout-icon"></div>
-                            </div>
-                        </div>
-
-                        <!-- ACTIVITY CALENDER CARDS -->
-                        <div class="activity-calendar-card flex">
-                            <img src="images/icons/bench_press.svg" alt="Bench Press">
-                            <div id="inactive-card" class="wrapper flex">
-                                <span class="day">FRI</span>
-                                <span class="date">19</span>
-                                <div class="incompleted-workout-icon"></div>
-                            </div>
-                        </div>
-
-                        <!-- ACTIVITY CALENDER CARDS -->
-                        <div class="activity-calendar-card flex">
-                            <img src="images/icons/bench_press.svg" alt="Bench Press">
-                            <div id="inactive-card" class="wrapper flex">
-                                <span class="day">FRI</span>
-                                <span class="date">19</span>
-                                <div class="incompleted-workout-icon"></div>
+                            <div class="wrapper active-workout inline-flex">
+                                <div class="day">WED</div>
+                                <div class="date">17</div>
+                                <div class="active-workout-marker"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- ACTIVITY CARD | GOALS -->
-                <div class="dashboard-card dashboard-card-4 flex">
-                    <div class="wrapper flex">
-                        <h4 class="card-name">Your goals</h4>
-                    </div>
-                </div>
-            </div>          
+            </div>            
         </div>
     </main>
+
+    <!-- FOOTER -->
+    <!-- <footer>
+        <div class="container-flex footer-container">
+            <nav class="footer-nav">
+                <ul class="footer-nav-list wrapper-flex card">
+                    <li class="footer-nav-item"><a href="#"><img src="images/icons/home.svg" alt="Home"></a></li>
+                    <li class="footer-nav-item"><a href="#"><img src="images/icons/workout.svg" alt="Workout"></a></li>
+                    <li class="footer-nav-item"><a href="#"><img src="images/icons/nutrition.svg" alt="Nutrition"></a></li>
+                    <li class="footer-nav-item"><a href="#"><img src="images/icons/training.svg" alt="Training"></a></li>
+                    <li class="footer-nav-item"><a href="#"><img src="images/icons/about.svg" alt="About"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer> -->
 </body>
 </html>

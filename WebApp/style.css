@@ -1,5 +1,4 @@
 /* VARIABLES */
-
 :root {
     /* FONTS */
     --main-font: "Work Sans", sans-serif;
@@ -85,24 +84,26 @@ h1 {
     font-size: var(--font-size-h1);
 }
 
-h2 {
-    font-size: var(--font-size-h2);
-}
-
+h2,
 h3 {
     font-size: var(--font-size-h2);
 }
 
-h4 {
+h4,
+h5 {
     font-size: var(--font-size-h4);
 }
 
 h1,
 h2,
-h3,
-h4 {
+h3 {
     margin: 0 0 var(--spacing-medium) 0;
-};
+}
+
+h4,
+h5 {
+    margin: 0 0 var(--spacing-small) 0;
+}
 
 p {
     font-size: var(--font-size-medium);
@@ -112,9 +113,36 @@ span {
     font-size: inherit;
 }
 
+html {
+    width: 100vmin;
+    height: auto;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    font-family: var(--main-font);
+    color: var(--main-color);
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+main,
+footer,
+header {
+    width: 100%;
+    height: auto;
+}
+
 /* UTILITY STYLES */
 .flex {
     display: flex;
+}
+
+.inline-flex {
+    display: inline-flex;
 }
 
 .grid {
@@ -147,32 +175,90 @@ span {
     transition: var(--transition);
 }
 
-/* CONTAINERS */
-/* INNER CONTAINER */
-.container,
-.overflow-container {
+/* CONTAINERS - FOR "OUTSIDE" */
+.container-flex,
+.overflow-container-flex-horizontal,
+.overflow-container-flex-vertical {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: var(--spacing-medium);
     width: 100%;
     height: auto;
     padding: var(--spacing-medium);
 }
 
-.overflow-container,
-.overflow-wrapper {
+/* CONTAINER GRID */
+.container-grid {
+    display: grid;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: var(--spacing-medium);
+}
+
+.overflow-wrapper-grid-horizontal {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: auto;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: var(--spacing-medium);
     overflow-x: scroll;
     overflow-y: hidden;
 }
 
-.wrapper {
+/* WRAPPERS - FOR "INSIDE" */
+.wrapper-flex,
+.overflow-wrapper-flex-horizontal,
+.overflow-wrapper-flex-vertical {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
     width: 100%;
     height: auto;
+    gap: var(--spacing-medium);
 }
 
-.overflow-wrapper {
+/* OVERFLOW CONTAINERS */
+.overflow-container-flex-horizontal {
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.overflow-container-flex-vertical {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    flex-direction: column;
+}
+
+/* OVERFLOW WRAPPERS */
+.overflow-wrapper-flex-horizontal {
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.overflow-wrapper-flex-vertical {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    flex-direction: column;
+}
+
+/* CARDS */
+.card {
     width: 100%;
+    height: auto;
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius-medium);
+    padding: var(--spacing-medium);
+}
+
+/* GRID LAYOUT */
+/* DASHBOARD */
+.grid-dashboard {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: var(--spacing-medium);
 }
 
 /* HOVER | ACTIVE STYLES */
@@ -184,212 +270,184 @@ span {
     transform: scale(var(--hover-scale));
 }
 
-/* STYLES */
-/* MOBILE */
-body {
-    font-family: var(--main-font);
-    width: 100vmin;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: var(--main-color);
-}
-
-/* HEADER */
-header {
-    width: 100%;
-    height: auto;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    padding: var(--spacing-medium) 0;
-}
-
-.header-container {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-/* NAV MENU / PROFILE ICON */
-.nav-menu-toggle_container {
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 40px;
-    height: 40px;
-    align-items: center;
-    padding: var(--spacing-small) 0;
-    justify-content: space-between;
-}
-
-.nav-menu-toggle {
-    width: 100%;
-    height: 3px;
-    border-radius: 5px;
-    background-color: var(--main-color);
-}
-
-.nav-menu-profile {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--secondary-color);
-}
-
-#profile-icon {
-    width: 70%;
-    height: 70%;
-}
-
-/* MAIN */
-main {
-    width: 100%;
-    height: auto;
-}
-
-/* INTRO */
-main > .container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
-}
-/* CALENDAR */
-.calendar-container {
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: nowrap;
-    gap: 0;
-    padding: var(--spacing-medium) 0;
-}
-
-/* CALENDAR CARD*/
-.calendar-card {
-    border-radius: var(--border-radius-small);
-    max-width: max-content;
-    width: 100%;
-    height: auto;
-    padding: var(--spacing-medium);
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-small);
-}
-
-#active-workout {
-    background-color: var(--secondary-color);
-}
-
-.completed-workout-wrapper {
-    width: 100%;
-    height: auto;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-small);
-}
-
-.completed-workout-icon,
-.incompleted-workout-icon,
-.active-workout-icon {
+/* MARKERS */
+.completed-workout-marker,
+.incompleted-workout-marker,
+.active-workout-marker,
+.inactive-workout-marker {
     width: 10px;
     height: 10px;
     border-radius: 50%;
     background-color: var(--main-color);
 }
 
-.inactive-workout-icon {
-    background-color: var(--secondary-color)
-}
-
-.incompleted-workout-icon {
+.incompleted-workout-marker,
+.inactive-workout-marker {
     opacity: 0;
 }
 
-/* CARD DATE DETAILS */
-.day {
-    font-size: var(--font-size-medium);
+/* ICONS */
+.workout-icon,
+.progess-icon {
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* NAV BUTTON */
+.nav-btn {
+    width: 40px;
+    height: 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-xsmall) 0;
+}
+
+.nav-btn:hover {
+    cursor: var(--cursor-hover);
+}
+
+/* NAV LINES */
+.nav-btn-line {
+    width: 100%;
+    height: 5px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    background-color: var(--main-color);
+}
+
+/* PROFILE ICON */
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-icon:hover,
+.profile-icon:active {
+    cursor: var(--cursor-hover);
+}
+
+/* IMAGES */
+img {
+    width: 100%;
+    height: auto;
+    max-width: 30px;
+}
+
+/* STYLES */
+/* MOBILE */
+/* HEADER */
+.header-container {
+    justify-content: space-between;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+/* MAIN */
+/* USER INTRO */
+.intro-container {
+    flex-direction: column;
+    align-items: start;
+}
+
+/* MAIN CALENDAR */
+.calendar-wrapper {
+    flex-direction: column;
+    padding: var(--spacing-medium);
+    border-radius: var(--border-radius-medium);
 }
 
 .date {
     font-size: var(--font-size-h1);
 }
 
-/* DASHBOARD */
-/* DASHBOARD CARDS */
-.dashboard-card {
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-small);
+#current-workout {
     background-color: var(--secondary-color);
-    width: 100%;
-    height: 100%;
-    border-radius: var(--border-radius-medium);
-    padding: var(--spacing-medium);
-    margin: 0 0 var(--spacing-medium) 0;
 }
 
-.dashboard-card .wrapper {
-    flex-direction: row;
+/* DASHBOARD */
+.dashboard-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: var(--spacing-medium);
+}
+
+/* CARDS */
+.card-1 {
+    grid-column: 1 / 3;
+}
+
+.card-1 .wrapper-flex {
     align-items: baseline;
     justify-content: space-between;
 }
 
-.dashboard-card .overflow-wrapper {
-    flex-direction: row;
-    align-items: center;
-    gap: var(--spacing-medium);
-    padding: 0 0 var(--spacing-medium) 0;
+.card-2 {
+    grid-column: 1 / 3;
 }
 
-/* ACTIVITY CARDS */
-.activity-wrapper {
-    width: 100%;
-    flex-direction: row;
-    align-items: center;
-    gap: var(--spacing-medium);
+.card-3 {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
 }
 
-.dashboard-card-3 {
-    width: 50%;
-}
-
-.inline-card-link {
-    font-size: var(--font-size-h4);
-}
-
-.dashboard-card-3 .wrapper {
+.card-3 .wrapper-flex {
     flex-direction: column;
+    align-items: baseline;
+    gap: var(--spacing-xsmall);
 }
 
-/* ACTIVITY CALENDAR */
-.activity-calendar-wrapper {
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-    align-items: center;
+.card-3 a {
+    font-size: var(--font-size-regular);
 }
 
-/* ACTIVITY CALENDAR CARD */
-.activity-calendar-card {
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-medium);
-}
-
-.activity-calendar-card .wrapper {
+/* CARD CALENDAR */
+.calendar-card {
     flex-direction: column;
     align-items: center;
 }
 
-.activity-calendar-card #active-card,
-.activity-calendar-card #inactive-card {
+.card-3 .active-workout {
+    flex-direction: column;
+    align-items: center;
     background-color: #FFFFFF;
+    padding: var(--spacing-xsmall);
     border-radius: var(--border-radius-small);
-    padding: var(--spacing-medium);
 }
 
-.activity-calendar-card #inactive-card {
-    background-color: transparent;
+/* FOOTER */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
 }
 
+.footer-container {
+    width: 100%;
+}
 
+.footer-nav {
+    width: 100%;
+}
 
+.footer-nav-list {
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-nav-item {
+    transition: var(--transition);
+}
+
+.footer-nav-item:hover,
+.footer-nav-item:active {
+    cursor: var(--cursor-hover);
+    transform: scale(var(--hover-scale));
+}
